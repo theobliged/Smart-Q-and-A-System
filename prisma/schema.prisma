@@ -1,0 +1,11 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL") // This is the crucial line for migrations
+}
+
+// ... rest of your file containing the ENUMS and MODELS ...
+generator client {
+  provider = "prisma-client-js"
+}
+
